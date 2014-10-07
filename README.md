@@ -16,7 +16,7 @@ IListCache listCache  = new ListCache();
 // Retrieves all the countries from the database, caches then returns the collection.
 List<country> countryEntities1 = listCache.GetListOf<country>(); 
 
-// this time, the countries are retrieved from the cache
+// This time, the countries are retrieved from the cache.
 List<country> countryEntities2 = listCache.GetListOf<country>(); 
 ```
 
@@ -45,8 +45,9 @@ IListCache listCache = new ListCache();
 // Retrieves a filtered country entity list (countries with a name starting with "U"), 
 // then generates, caches and return a List of CountryDto objects out of it. 
 // Also the filtered country entity list gets cached in the process.
-List<CountryDto> countryDtos1 = listCache.GetListOf<country, CountryDto>(c => c.Name.StartsWith("U"), 
-																		 "CountriesStartingWithU"); 
+List<CountryDto> countryDtos1 = 
+					listCache.GetListOf<country, CountryDto>(c => c.Name.StartsWith("U"), 
+															 "CountriesStartingWithU"); 
 
 // In both statements below, the CountryDto filtered collection is retrieved from the cache.
 List<CountryDto> countryDtos2 = 
