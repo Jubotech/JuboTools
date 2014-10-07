@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Jubotech.Common; // Contains the entities and DTO objects
-using Jubotech.DAL;    // Contains the Data Access Layer (Generik Repository + UnitOfWork) 
+using Jubotech.DAL;    // Contains the Data Access Layer (Generic Repository + UnitOfWork) 
 using Omu.ValueInjecter;
 
 namespace Jubotech.Caching
