@@ -1,5 +1,4 @@
 ﻿using System;
-using Jubo.GlobalHorseDirectory.Common;
 
 namespace Jubotech.Caching
 {

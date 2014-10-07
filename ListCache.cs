@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Jubo.GlobalHorseDirectory.Common;
-using Jubo.GlobalHorseDirectory.DAL.Repository;
+using Jubotech.Common; // Contains the entities and DTO objects
+using Jubotech.DAL;    // Contains the Data Access Layer (Generik Repository + UnitOfWork) 
 using Omu.ValueInjecter;
 
 namespace Jubotech.Caching
