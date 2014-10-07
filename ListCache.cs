@@ -19,7 +19,6 @@ namespace Jubotech.Caching
         private readonly ICacheHelper _cacheHelper;
         private Dictionary<string, IEnumerable<object>> _cachedLists;
 
-
         public ListCache()
         {
             _lock        = new object();
@@ -27,7 +26,6 @@ namespace Jubotech.Caching
             _unitOfWork  = IoC.Resolve<IUnitOfWork>();
             _cacheHelper = IoC.Resolve<ICacheHelper>();
         }
-
 
         /// <summary>
         /// Gets a List of TEntity from the cache or creates, then returns it if it doesn't exist.
@@ -62,6 +60,7 @@ namespace Jubotech.Caching
 
             return _cachedLists[key] as List<TEntity>;
         }
+		
         /// <summary>
         /// Gets a List of TDto from the cache or creates then returns it if it doesn't exist. The TDto objects are created out of a cached list of TEntity objects and are mapped automatically.
         /// Note: If the 'predicate' parameter is defined when calling GetListOf(...), the parameter 'additionalKey' must also be defined
@@ -87,6 +86,7 @@ namespace Jubotech.Caching
 
             return _cachedLists[key] as List<TDto>;
         }
+		
         /// <summary>
         /// Creates a NEW list of TDto objects out of a cached list of TEntity objects
         /// Note: If the 'predicate' parameter is defined when calling GetListOf(...), the parameter 'additionalKey' must also be defined
@@ -110,6 +110,7 @@ namespace Jubotech.Caching
 
             return dtos;
         }
+		
         /// <summary>
         /// Clears the cache
         /// </summary>
@@ -118,7 +119,6 @@ namespace Jubotech.Caching
             _cachedLists = null;
             LogHelper.WriteInfoLog("ListCache._cachedLists cleared!");
         }
-
 
         private IEnumerable<TDto> GetListOfDtoFromEntity<TEntity, TDto>(Func<TEntity, bool> predicate)
             where TEntity : class
