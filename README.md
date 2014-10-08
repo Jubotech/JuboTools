@@ -5,7 +5,7 @@ With ListCache you can query your database using Linq-to-Entity, retrieve and ca
  
 But manipulating entities directly is not always recommended. Here, ListCache can also help. You can query your database using Linq-to-Entity, retrieve your entities, automatically map them to a collection of DTO objects (thanks to Omu.ValueInjecter and its convention based mapping), cache this collection then return it. Again, all in one line of code!
 
-Subsequent identical calls to the ListCache methods for the same entities and DTO objects simply return the data from the cache. The key of the cached data is the Type name of the entity or DTO object retrieved.
+Subsequent identical calls to the ListCache methods for the same entities and DTO objects simply return the data from the cache. The key of the cached data is the Type name of the entity or DTO object retrieved. You can also define your own cache key if needed.
 
 The idea is to have a consistent way to retrieve data with Entity Framework, without having to worry about caching or mapping to simpler objects (DTO objects). By specifying Type parameters in the method calls, you define what entities you want to retrieve, and what DTO objects these entities should be mapped to. 
 
