@@ -1,11 +1,15 @@
-﻿ListCache - Fetch, map, cache and reuse in one line of code!
-============================================================
+﻿Entity Framework ListCache - Fetch, map, cache and reuse in one line of code!
+=============================================================================
 
 With ListCache you can query your database using Linq-to-Entity, retrieve and cache your entities all in one line of code.
  
-But, manipulating entities directly is not always recommended. ListCache can also help. You can query your database using Linq-to-Entity, retrieve your entities, automatically map them to a collection of DTO objects (thanks Omu.ValueInjecter!), cache then return this collection of DTO objects, again all in one line of code!
+But manipulating entities directly is not always recommended. Here, ListCache can also help. You can query your database using Linq-to-Entity, retrieve your entities, automatically map them to a collection of DTO objects (thanks to Omu.ValueInjecter and its convention based mapping), cache this collection then return it. Again, all in one line of code!
 
-Subsequent identical calls to the ListCache methods for the same entities or DTO objects simply return the data from the cache. The key of the cached data is the Type name of the entity or DTO object retrieved. If a Linq query predicate is used to filter the data, then the caller needs to specify a key explicitely.
+Subsequent identical calls to the ListCache methods for the same entities and DTO objects simply return the data from the cache. The key of the cached data is the Type name of the entity or DTO object retrieved.
+
+The idea is to have a consistent way to retrieve data with Entity Framework, without having to worry about caching or mapping to simpler objects (DTO objects). By specifying Type parameters in the method calls, you define what entities you want to retrieve, and what DTO objects these entities should be mapped to. 
+
+The use of ListCache is appropriate in situations where you know that the data is not going to change regularly and needs to be cached for better performance. (ex: countries, configuration values, currency symboles, etc.)
 
 
 Retrieving and caching a collection of Entity Framework entities
