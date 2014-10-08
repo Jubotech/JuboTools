@@ -1,5 +1,5 @@
-﻿Caching Utility
-===============
+﻿ListCache - Fetch, cache, and reuse with 1 line of code!
+========================================================
 
 With ListCache you can query your database using Linq-to-Entity, retrieve and cache your entities all in one line of code.
  
