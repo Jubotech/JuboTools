@@ -30,7 +30,7 @@ Retrieving and caching a collection of DTO objects created out of your Entity Fr
 IListCache listCache = new ListCache();
 
 // Retrieves a country entity list, then generates, caches 
-// and return a List of CountryDto objects out of it. 
+// and returns a List of CountryDto objects out of it. 
 // Also the country entity list gets cached in the process.
 List<CountryDto> countryDtos1 = listCache.GetListOf<country, CountryDto>(); 
 
@@ -47,7 +47,7 @@ Retrieving and caching a filtered collection of DTO objects created out of your 
 IListCache listCache = new ListCache();
 
 // Retrieves a filtered country entity list (countries with a name starting with "U"), 
-// then generates, caches and return a List of CountryDto objects out of it. 
+// then generates, caches and returns a List of CountryDto objects out of it. 
 // Also the filtered country entity list gets cached in the process.
 List<CountryDto> countryDtos1 = 
 					listCache.GetListOf<country, CountryDto>(c => c.Name.StartsWith("U"), 
