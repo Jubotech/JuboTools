@@ -61,8 +61,8 @@ List<CountryDto> countryDtos3 =
 					listCache.GetListOf<country, CountryDto>("CountriesStartingWithU");
 ```
 
-Clears the cache
-=========================================================================================================
+Clearing the cache
+==================
 ```
 IListCache listCache = new ListCache();
 // ...

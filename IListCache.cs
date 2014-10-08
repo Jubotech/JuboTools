@@ -5,7 +5,7 @@ namespace Jubotech.Caching
 {
     public interface IListCache
     {
-        List<TDto> GetListOf<TEntity, TDto>(Func<TEntity, bool> predicate = null, string additionalKey = "") 
+		List<TDto> GetListOf<TEntity, TDto>(Func<TEntity, bool> predicate = null, string additionalKey = "") 
 			where TEntity : class 
 			where TDto : class, new();
 
@@ -13,9 +13,9 @@ namespace Jubotech.Caching
             where TEntity : class
             where TDto : class, new();
         
-        List<TEntity> GetListOf<TEntity>(Func<TEntity, bool> predicate = null, string additionalKey = "")
+		List<TEntity> GetListOf<TEntity>(Func<TEntity, bool> predicate = null, string additionalKey = "")
             where TEntity : class;
 
-        void ClearListCache();
+		void ClearListCache();
     }
 }

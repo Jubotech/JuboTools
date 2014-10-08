@@ -4,7 +4,7 @@ namespace Jubotech.Caching
 {
     public interface ICacheHelper
     {
-        string GenerateKey<T>(string additionalKey) where T : class;
+		string GenerateKey<T>(string additionalKey) where T : class;
         
 		string GetExtraKey(string additionalKey);
         
